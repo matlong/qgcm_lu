@@ -1,8 +1,7 @@
 #!/bin/bash
 
 set -x
-ulimit -s hard
-export OMP_NUM_THREADS=8
+export OMP_NUM_THREADS=4
 
 recompile=1 # option for recompilation
 cp inputs/lastday40.nc ./lastday.nc

@@ -33,7 +33,8 @@
 # default linelength = 72 would suffice for the rest of the code
 #FC = gfortran -std=f95 -ffixed-line-length-80
 
-FC = gfortran -ffixed-line-length-80 -fimplicit-none -std=legacy -w -fallow-argument-mismatch -O2
+FC = gfortran -ffixed-line-length-80 -fimplicit-none -std=legacy \
+-w -Wno-argument-mismatch -O2
 
 # (may also want to try -std=legacy)
 # Add -g for profiling
@@ -43,10 +44,12 @@ FC = gfortran -ffixed-line-length-80 -fimplicit-none -std=legacy -w -fallow-argu
 #-Wuninitialized -Wsurprising -ffpe-trap=invalid,zero,overflow -g
 # With OpenMP
 
-FFLAGS = -O3 -mtune=native -Wunused -Wuninitialized \
--Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -w -fallow-argument-mismatch -O2
-DEBUGS = -O3 -mtune=native -pedantic -Wunused \
--Waliasing -Wuninitialized -Wsurprising -fbounds-check -fbacktrace -g
+FFLAGS = -O3 -mtune=native -Wunused -Wuninitialized -Waliasing \
+-Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g \
+-fopenmp -w -Wno-argument-mismatch -O2
+
+DEBUGS = -O3 -mtune=native -pedantic -Wunused -Waliasing \
+-Wuninitialized -Wsurprising -fbounds-check -fbacktrace -g
 
 # (may also want to try -ffpe-trap=invalid,zero,overflow, -msse4.2)
 # Cannot get -static to work, produces a Segmentation fault.
@@ -83,8 +86,8 @@ LAPOBJ = lasubs.o
 # My version of netCDF4 for GCC4.5.3, with separated Fortran library
 # Also of course needs a corresponding HDF5 library
 
-NCBASE = /usr/local/opt/netcdf
-H5BASE = /usr/local/opt/hdf5
+NCBASE = /usr/local/netcdf4-all
+H5BASE = ${NCBASE}
 NCIDIR = ${NCBASE}/include
 
 # Derived symbols passed to Makefile:
