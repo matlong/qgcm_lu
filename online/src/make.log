@@ -1,0 +1,957 @@
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c parameters_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c atconst_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c occonst_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c athomog_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c ochomog_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c atstate_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c ocstate_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c intrfac_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c radiate_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c timinfo_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c monitor_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c intsubs.f
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c luparam_data.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c atluvar.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c atedvl.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c amlsubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c qgasubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c atisubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c ocluvar.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c ocedvl.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c omlsubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c qgosubs.F
+qgosubs.F:78:42:
+
+      &                 qdot(nlo),qold,rdzo
+                                          1
+Warning: Unused variable 'rdzo' declared at (1) [-Wunused-variable]
+qgosubs.F:699:0:
+
+       SUBROUTINE ocadslu (dqdt, q, p, ur, vr, axx, ayy, axy)
+ 
+Warning: 'ocadslu' defined but not used [-Wunused-function]
+qgosubs.F:975:0:
+
+       SUBROUTINE ocadblu (dbdt, b, ur, vr, axx, ayy, axy)
+ 
+Warning: 'ocadblu' defined but not used [-Wunused-function]
+qgosubs.F:1098:0:
+
+       SUBROUTINE ocadsed (dqdt, q, p, us, vs)
+ 
+Warning: 'ocadsed' defined but not used [-Wunused-function]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c ocisubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c conhoms.F
+conhoms.F:809:5:
+
+   260 format(i6,1x,1p,5d14.6)
+     1
+Warning: Label 260 at (1) defined but not used [-Wunused-label]
+conhoms.F:351:36:
+
+      &                 pchdet,aipch1,aipch2
+                                    1
+Warning: Unused variable 'aipch1' declared at (1) [-Wunused-variable]
+conhoms.F:351:43:
+
+      &                 pchdet,aipch1,aipch2
+                                           1
+Warning: Unused variable 'aipch2' declared at (1) [-Wunused-variable]
+conhoms.F:350:29:
+
+       double precision pch1yn,pch2yn,pch1ys,pch2ys,
+                             1
+Warning: Unused variable 'pch1yn' declared at (1) [-Wunused-variable]
+conhoms.F:350:43:
+
+       double precision pch1yn,pch2yn,pch1ys,pch2ys,
+                                           1
+Warning: Unused variable 'pch1ys' declared at (1) [-Wunused-variable]
+conhoms.F:350:36:
+
+       double precision pch1yn,pch2yn,pch1ys,pch2ys,
+                                    1
+Warning: Unused variable 'pch2yn' declared at (1) [-Wunused-variable]
+conhoms.F:350:50:
+
+       double precision pch1yn,pch2yn,pch1ys,pch2ys,
+                                                  1
+Warning: Unused variable 'pch2ys' declared at (1) [-Wunused-variable]
+conhoms.F:351:29:
+
+      &                 pchdet,aipch1,aipch2
+                             1
+Warning: Unused variable 'pchdet' declared at (1) [-Wunused-variable]
+conhoms.F:72:40:
+
+       double precision apsp,apnp,aps,apn
+                                        1
+Warning: Unused variable 'apn' declared at (1) [-Wunused-variable]
+conhoms.F:72:32:
+
+       double precision apsp,apnp,aps,apn
+                                1
+Warning: Unused variable 'apnp' declared at (1) [-Wunused-variable]
+conhoms.F:72:36:
+
+       double precision apsp,apnp,aps,apn
+                                    1
+Warning: Unused variable 'aps' declared at (1) [-Wunused-variable]
+conhoms.F:72:27:
+
+       double precision apsp,apnp,aps,apn
+                           1
+Warning: Unused variable 'apsp' declared at (1) [-Wunused-variable]
+conhoms.F:64:9:
+
+       USE monitor, ONLY : et2moc, et2mat
+         1
+Warning: Unused module variable 'et2mat' which has been explicitly imported at (1) [-Wunused-variable]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c vorsubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c xfosubs.F
+xfosubs.F:1634:37:
+
+       integer ip,jp,kp,id,jd,kd,i,j,k
+                                     1
+Warning: Unused variable 'k' declared at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'adown' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:81:9:
+
+       USE monitor, ONLY : arlaav, slhfav, oradav, arocav
+         1
+Warning: Unused module variable 'arlaav' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:81:9:
+
+       USE monitor, ONLY : arlaav, slhfav, oradav, arocav
+         1
+Warning: Unused module variable 'arocav' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'astm' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'b1down' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'bmup' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'c1down' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'cdat' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'cmup' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'd0up' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'dmdown' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'dmup' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'fnetat' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'fnetoc' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'hmadmp' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'hmat' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'hmixam' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'hmoc' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:100:22:
+
+       integer i,j,ioff,joff,io,jo
+                      1
+Warning: Unused variable 'ioff' declared at (1) [-Wunused-variable]
+xfosubs.F:100:27:
+
+       integer i,j,ioff,joff,io,jo
+                           1
+Warning: Unused variable 'joff' declared at (1) [-Wunused-variable]
+xfosubs.F:81:9:
+
+       USE monitor, ONLY : arlaav, slhfav, oradav, arocav
+         1
+Warning: Unused module variable 'oradav' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:74:9:
+
+       USE ocstate, ONLY : pom, wekpo, wekto
+         1
+Warning: Unused module variable 'pom' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'raoro' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:81:9:
+
+       USE monitor, ONLY : arlaav, slhfav, oradav, arocav
+         1
+Warning: Unused module variable 'slhfav' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'sstm' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'tauxa' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'tauya' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:101:50:
+
+       double precision hxafac,hxofac,txsums,txsumn
+                                                  1
+Warning: Unused variable 'txsumn' declared at (1) [-Wunused-variable]
+xfosubs.F:101:43:
+
+       double precision hxafac,hxofac,txsums,txsumn
+                                           1
+Warning: Unused variable 'txsums' declared at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'uekat' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:76:9:
+
+       USE intrfac, ONLY : sstm, astm, tauxo, tauyo, tauxa, tauya,
+         1
+Warning: Unused module variable 'vekat' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:79:9:
+
+       USE radiate, ONLY : xlamda, Adown, Bmup, B1down,
+         1
+Warning: Unused module variable 'xlamda' which has been explicitly imported at (1) [-Wunused-variable]
+xfosubs.F:879:0:
+
+       SUBROUTINE bilint (xa, ya, nxat, nyat, atmos,
+ 
+Warning: 'bilint' defined but not used [-Wunused-function]
+xfosubs.F:985:0:
+
+       SUBROUTINE auvbcu (u1astd, u1afin, v1astd, v1afin)
+ 
+Warning: 'auvbcu' defined but not used [-Wunused-function]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c valsubs.F
+valsubs.F:67:9:
+
+       USE intrfac, ONLY : sst, ast, tauxa, tauya
+         1
+Warning: Unused module variable 'ast' which has been explicitly imported at (1) [-Wunused-variable]
+valsubs.F:67:9:
+
+       USE intrfac, ONLY : sst, ast, tauxa, tauya
+         1
+Warning: Unused module variable 'tauxa' which has been explicitly imported at (1) [-Wunused-variable]
+valsubs.F:67:9:
+
+       USE intrfac, ONLY : sst, ast, tauxa, tauya
+         1
+Warning: Unused module variable 'tauya' which has been explicitly imported at (1) [-Wunused-variable]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c nc_subs.F
+nc_subs.F:1142:9:
+
+       USE timinfo, ONLY : ntdone, noutat, tyrs
+         1
+Warning: Unused module variable 'noutat' which has been explicitly imported at (1) [-Wunused-variable]
+nc_subs.F:1142:9:
+
+       USE timinfo, ONLY : ntdone, noutat, tyrs
+         1
+Warning: Unused module variable 'ntdone' which has been explicitly imported at (1) [-Wunused-variable]
+nc_subs.F:1142:9:
+
+       USE timinfo, ONLY : ntdone, noutat, tyrs
+         1
+Warning: Unused module variable 'tyrs' which has been explicitly imported at (1) [-Wunused-variable]
+nc_subs.F:535:9:
+
+       USE timinfo, ONLY : noutstepat
+         1
+Warning: Unused module variable 'noutstepat' which has been explicitly imported at (1) [-Wunused-variable]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c radsubs.f
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c topsubs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c eigmode.f
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c areasubs_diag.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c covaria_diag.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c monitor_diag.F
+monitor_diag.F:69:55:
+
+      &                  ah2doc_id, ah4doc_id, ah4dat_id, emfroc_id,
+                                                       1
+Warning: Unused PRIVATE module variable 'ah4dat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:64:66:
+
+      &                  slhfav_id, oradav_id, arocav_id, arlaav_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'arlaav_id' declared at (1) [-Wunused-value]
+monitor_diag.F:64:55:
+
+      &                  slhfav_id, oradav_id, arocav_id, arlaav_id,
+                                                       1
+Warning: Unused PRIVATE module variable 'arocav_id' declared at (1) [-Wunused-value]
+monitor_diag.F:61:55:
+
+      &                  tmlmoc_id, astmin_id, astmax_id, tmlmat_id,
+                                                       1
+Warning: Unused PRIVATE module variable 'astmax_id' declared at (1) [-Wunused-value]
+monitor_diag.F:61:44:
+
+      &                  tmlmoc_id, astmin_id, astmax_id, tmlmat_id,
+                                            1
+Warning: Unused PRIVATE module variable 'astmin_id' declared at (1) [-Wunused-value]
+monitor_diag.F:73:34:
+
+      &                  atstpos_id, ocjval_id, ocjpos_id, osfmin_id,
+                                  1
+Warning: Unused PRIVATE module variable 'atstpos_id' declared at (1) [-Wunused-value]
+monitor_diag.F:72:67:
+
+      &                  btdgoc_id, et2mat_id, et2moc_id, atstval_id,
+                                                                   1
+Warning: Unused PRIVATE module variable 'atstval_id' declared at (1) [-Wunused-value]
+monitor_diag.F:65:66:
+
+      &                  cfraoc_id, cfraat_id, centoc_id, centat_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'centat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:65:44:
+
+      &                  cfraoc_id, cfraat_id, centoc_id, centat_id,
+                                            1
+Warning: Unused PRIVATE module variable 'cfraat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:81:55:
+
+      &                  cnmloc_id, cnqgoc_id, cnmlat_id, cnqgat_id
+                                                       1
+Warning: Unused PRIVATE module variable 'cnmlat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:81:66:
+
+      &                  cnmloc_id, cnqgoc_id, cnmlat_id, cnqgat_id
+                                                                  1
+Warning: Unused PRIVATE module variable 'cnqgat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:70:46:
+
+      &                  ddtkeoc_id, ddtkeat_id, ddtpeoc_id, ddtpeat_id,
+                                              1
+Warning: Unused PRIVATE module variable 'ddtkeat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:70:70:
+
+      &                  ddtkeoc_id, ddtkeat_id, ddtpeoc_id, ddtpeat_id,
+                                                                      1
+Warning: Unused PRIVATE module variable 'ddtpeat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:66:44:
+
+      &                  ermasa_id, emfrat_id, hmlmat_id, kealoc_id,
+                                            1
+Warning: Unused PRIVATE module variable 'emfrat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:69:66:
+
+      &                  ah2doc_id, ah4doc_id, ah4dat_id, emfroc_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'emfroc_id' declared at (1) [-Wunused-value]
+monitor_diag.F:59:66:
+
+      &                  entmoc_id, entmat_id, enamoc_id, enamat_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'enamat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:59:44:
+
+      &                  entmoc_id, entmat_id, enamoc_id, enamat_id,
+                                            1
+Warning: Unused PRIVATE module variable 'entmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:66:33:
+
+      &                  ermasa_id, emfrat_id, hmlmat_id, kealoc_id,
+                                 1
+Warning: Unused PRIVATE module variable 'ermasa_id' declared at (1) [-Wunused-value]
+monitor_diag.F:68:66:
+
+      &                  qavgat_id, hfmloc_id, hcmlat_id, ermaso_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'ermaso_id' declared at (1) [-Wunused-value]
+monitor_diag.F:72:44:
+
+      &                  btdgoc_id, et2mat_id, et2moc_id, atstval_id,
+                                            1
+Warning: Unused PRIVATE module variable 'et2mat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:60:44:
+
+      &                  etamoc_id, etamat_id, sstmin_id, sstmax_id,
+                                            1
+Warning: Unused PRIVATE module variable 'etamat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:68:55:
+
+      &                  qavgat_id, hfmloc_id, hcmlat_id, ermaso_id,
+                                                       1
+Warning: Unused PRIVATE module variable 'hcmlat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:66:55:
+
+      &                  ermasa_id, emfrat_id, hmlmat_id, kealoc_id,
+                                                       1
+Warning: Unused PRIVATE module variable 'hmlmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:67:33:
+
+      &                  kealat_id, pavgoc_id, pavgat_id, qavgoc_id,
+                                 1
+Warning: Unused PRIVATE module variable 'kealat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:74:66:
+
+      &                  osfmax_id, occirc_id, occtot_id, olrtop_id
+                                                                  1
+Warning: Unused PRIVATE module variable 'olrtop_id' declared at (1) [-Wunused-value]
+monitor_diag.F:64:44:
+
+      &                  slhfav_id, oradav_id, arocav_id, arlaav_id,
+                                            1
+Warning: Unused PRIVATE module variable 'oradav_id' declared at (1) [-Wunused-value]
+monitor_diag.F:67:55:
+
+      &                  kealat_id, pavgoc_id, pavgat_id, qavgoc_id,
+                                                       1
+Warning: Unused PRIVATE module variable 'pavgat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:71:44:
+
+      &                  pkenoc_id, pkenat_id, utauoc_id, utauat_id,
+                                            1
+Warning: Unused PRIVATE module variable 'pkenat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:68:33:
+
+      &                  qavgat_id, hfmloc_id, hcmlat_id, ermaso_id,
+                                 1
+Warning: Unused PRIVATE module variable 'qavgat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:64:33:
+
+      &                  slhfav_id, oradav_id, arocav_id, arlaav_id,
+                                 1
+Warning: Unused PRIVATE module variable 'slhfav_id' declared at (1) [-Wunused-value]
+monitor_diag.F:62:33:
+
+      &                  tmaooc_id, ttmads_id, ttmdfs_id, vfmads_id,
+                                 1
+Warning: Unused PRIVATE module variable 'tmaooc_id' declared at (1) [-Wunused-value]
+monitor_diag.F:61:66:
+
+      &                  tmlmoc_id, astmin_id, astmax_id, tmlmat_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'tmlmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:80:46:
+
+      &                  ugminat_id, ugmaxat_id, vgminat_id, vgmaxat_id,
+                                              1
+Warning: Unused PRIVATE module variable 'ugmaxat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:80:34:
+
+      &                  ugminat_id, ugmaxat_id, vgminat_id, vgmaxat_id,
+                                  1
+Warning: Unused PRIVATE module variable 'ugminat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:79:46:
+
+      &                  umminat_id, ummaxat_id, vmminat_id, vmmaxat_id,
+                                              1
+Warning: Unused PRIVATE module variable 'ummaxat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:79:34:
+
+      &                  umminat_id, ummaxat_id, vmminat_id, vmmaxat_id,
+                                  1
+Warning: Unused PRIVATE module variable 'umminat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:71:66:
+
+      &                  pkenoc_id, pkenat_id, utauoc_id, utauat_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'utauat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:80:70:
+
+      &                  ugminat_id, ugmaxat_id, vgminat_id, vgmaxat_id,
+                                                                      1
+Warning: Unused PRIVATE module variable 'vgmaxat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:80:58:
+
+      &                  ugminat_id, ugmaxat_id, vgminat_id, vgmaxat_id,
+                                                          1
+Warning: Unused PRIVATE module variable 'vgminat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:79:70:
+
+      &                  umminat_id, ummaxat_id, vmminat_id, vmmaxat_id,
+                                                                      1
+Warning: Unused PRIVATE module variable 'vmmaxat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:79:58:
+
+      &                  umminat_id, ummaxat_id, vmminat_id, vmmaxat_id,
+                                                          1
+Warning: Unused PRIVATE module variable 'vmminat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:58:66:
+
+      &                  watmoc_id, watmat_id, wapmoc_id, wapmat_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'wapmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:58:44:
+
+      &                  watmoc_id, watmat_id, wapmoc_id, wapmat_id,
+                                            1
+Warning: Unused PRIVATE module variable 'watmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:57:66:
+
+      &                  wetmoc_id, wetmat_id, wepmoc_id, wepmat_id,
+                                                                  1
+Warning: Unused PRIVATE module variable 'wepmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:57:44:
+
+      &                  wetmoc_id, wetmat_id, wepmoc_id, wepmat_id,
+                                            1
+Warning: Unused PRIVATE module variable 'wetmat_id' declared at (1) [-Wunused-value]
+monitor_diag.F:2051:9:
+
+       USE atconst, ONLY : hat
+         1
+Warning: Unused module variable 'hat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:2069:36:
+
+       integer edims(2), lo_id, la_id, lom_id, lam_id, k
+                                    1
+Warning: Unused variable 'la_id' declared at (1) [-Wunused-variable]
+monitor_diag.F:2068:36:
+
+       integer ncstat, timedim, ladim, lodim, lamdim, lomdim
+                                    1
+Warning: Unused variable 'ladim' declared at (1) [-Wunused-variable]
+monitor_diag.F:2069:52:
+
+       integer edims(2), lo_id, la_id, lom_id, lam_id, k
+                                                    1
+Warning: Unused variable 'lam_id' declared at (1) [-Wunused-variable]
+monitor_diag.F:2068:51:
+
+       integer ncstat, timedim, ladim, lodim, lamdim, lomdim
+                                                   1
+Warning: Unused variable 'lamdim' declared at (1) [-Wunused-variable]
+monitor_diag.F:2070:43:
+
+       double precision tomp(nlo), tamp(nla)
+                                           1
+Warning: Unused variable 'tamp' declared at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'ah4at' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:122:9:
+
+       USE intrfac, ONLY : sst, ast, tauxo, tauyo,
+         1
+Warning: Unused module variable 'ast' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:124:9:
+
+       USE radiate, ONLY : Aup, Bup, Cup, Dup
+         1
+Warning: Unused module variable 'aup' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:124:9:
+
+       USE radiate, ONLY : Aup, Bup, Cup, Dup
+         1
+Warning: Unused module variable 'bup' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'cpat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:124:9:
+
+       USE radiate, ONLY : Aup, Bup, Cup, Dup
+         1
+Warning: Unused module variable 'cup' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'davgat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'dta' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:124:9:
+
+       USE radiate, ONLY : Aup, Bup, Cup, Dup
+         1
+Warning: Unused module variable 'dup' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'dxam2' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'gpat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'hat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:122:9:
+
+       USE intrfac, ONLY : sst, ast, tauxo, tauyo,
+         1
+Warning: Unused module variable 'hmat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:122:9:
+
+       USE intrfac, ONLY : sst, ast, tauxo, tauyo,
+         1
+Warning: Unused module variable 'hmixa' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'rdxaf0' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:112:9:
+
+       USE atconst, ONLY : gpat, rhoat, rdxaf0, dxam2,
+         1
+Warning: Unused module variable 'rhoat' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:122:9:
+
+       USE intrfac, ONLY : sst, ast, tauxo, tauyo,
+         1
+Warning: Unused module variable 'tauxa' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:122:9:
+
+       USE intrfac, ONLY : sst, ast, tauxo, tauyo,
+         1
+Warning: Unused module variable 'tauya' which has been explicitly imported at (1) [-Wunused-variable]
+monitor_diag.F:1011:0:
+
+       SUBROUTINE del4bx (arr, nx, ny, del2, dxm2, del4)
+ 
+Warning: 'del4bx' defined but not used [-Wunused-function]
+monitor_diag.F:1138:0:
+
+       SUBROUTINE del4ch (arr, nx, ny, del2, dxm2, del4)
+ 
+Warning: 'del4ch' defined but not used [-Wunused-function]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c qocdiag.F
+qocdiag.F:37:39:
+
+       integer, PRIVATE, SAVE :: dqdt_id, qotjac_id, qt2dif_id,
+                                       1
+Warning: Unused PRIVATE module variable 'dqdt_id' declared at (1) [-Wunused-value]
+qocdiag.F:38:52:
+
+      &                          qt4dif_id, qotent_id, timop_id
+                                                    1
+Warning: Unused PRIVATE module variable 'qotent_id' declared at (1) [-Wunused-value]
+qocdiag.F:37:50:
+
+       integer, PRIVATE, SAVE :: dqdt_id, qotjac_id, qt2dif_id,
+                                                  1
+Warning: Unused PRIVATE module variable 'qotjac_id' declared at (1) [-Wunused-value]
+qocdiag.F:37:61:
+
+       integer, PRIVATE, SAVE :: dqdt_id, qotjac_id, qt2dif_id,
+                                                             1
+Warning: Unused PRIVATE module variable 'qt2dif_id' declared at (1) [-Wunused-value]
+qocdiag.F:39:42:
+
+       logical, PRIVATE, SAVE :: qt2dif_out
+                                          1
+Warning: Unused PRIVATE module variable 'qt2dif_out' declared at (1) [-Wunused-value]
+qocdiag.F:38:41:
+
+      &                          qt4dif_id, qotent_id, timop_id
+                                         1
+Warning: Unused PRIVATE module variable 'qt4dif_id' declared at (1) [-Wunused-value]
+qocdiag.F:38:62:
+
+      &                          qt4dif_id, qotent_id, timop_id
+                                                              1
+Warning: Unused PRIVATE module variable 'timop_id' declared at (1) [-Wunused-value]
+qocdiag.F:322:9:
+
+       USE timinfo, ONLY : ntdone, noutoc, tyrs
+         1
+Warning: Unused module variable 'noutoc' which has been explicitly imported at (1) [-Wunused-variable]
+qocdiag.F:322:9:
+
+       USE timinfo, ONLY : ntdone, noutoc, tyrs
+         1
+Warning: Unused module variable 'ntdone' which has been explicitly imported at (1) [-Wunused-variable]
+qocdiag.F:322:9:
+
+       USE timinfo, ONLY : ntdone, noutoc, tyrs
+         1
+Warning: Unused module variable 'tyrs' which has been explicitly imported at (1) [-Wunused-variable]
+qocdiag.F:58:9:
+
+       USE timinfo, ONLY : noutstepoc
+         1
+Warning: Unused module variable 'noutstepoc' which has been explicitly imported at (1) [-Wunused-variable]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c timavge.F
+timavge.F:286:9:
+
+       USE intrfac, ONLY : ast, tauxa, tauya, fnetat, hmat
+         1
+Warning: Unused module variable 'ast' which has been explicitly imported at (1) [-Wunused-variable]
+timavge.F:286:9:
+
+       USE intrfac, ONLY : ast, tauxa, tauya, fnetat, hmat
+         1
+Warning: Unused module variable 'fnetat' which has been explicitly imported at (1) [-Wunused-variable]
+timavge.F:286:9:
+
+       USE intrfac, ONLY : ast, tauxa, tauya, fnetat, hmat
+         1
+Warning: Unused module variable 'hmat' which has been explicitly imported at (1) [-Wunused-variable]
+timavge.F:286:9:
+
+       USE intrfac, ONLY : ast, tauxa, tauya, fnetat, hmat
+         1
+Warning: Unused module variable 'tauxa' which has been explicitly imported at (1) [-Wunused-variable]
+timavge.F:286:9:
+
+       USE intrfac, ONLY : ast, tauxa, tauya, fnetat, hmat
+         1
+Warning: Unused module variable 'tauya' which has been explicitly imported at (1) [-Wunused-variable]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -c ludyn_subs.F
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp  -Docean_only   -Duse_netcdf     -Dlu_mode -Dgmlu_param -Duse_edvel -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -I/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/include -c q-gcm.F
+q-gcm.F:3023:5:
+
+   201 format(a,i12)
+     1
+Warning: Label 201 at (1) defined but not used [-Wunused-label]
+q-gcm.F:514:27:
+
+       call diffts (2, nlo, st2d, 1, dxo, rdefoc, dto)
+                           1
+Warning: Rank mismatch in argument 'coeff' at (1) (rank-1 and scalar) [-Wargument-mismatch]
+q-gcm.F:516:27:
+
+       call diffts (4, nlo, st4d, 1, dxo, rdefoc, dto)
+                           1
+Warning: Rank mismatch in argument 'coeff' at (1) (rank-1 and scalar) [-Wargument-mismatch]
+q-gcm.F:579:27:
+
+       call diffts (2, nla, at2d, 1, dxa, rdefat, dta)
+                           1
+Warning: Rank mismatch in argument 'coeff' at (1) (rank-1 and scalar) [-Wargument-mismatch]
+q-gcm.F:581:27:
+
+       call diffts (4, nla, at4d, 1, dxa, rdefat, dta)
+                           1
+Warning: Rank mismatch in argument 'coeff' at (1) (rank-1 and scalar) [-Wargument-mismatch]
+q-gcm.F:583:27:
+
+       call diffts (2, nla, ahmd, 1, dxa, rdefat, dta)
+                           1
+Warning: Rank mismatch in argument 'coeff' at (1) (rank-1 and scalar) [-Wargument-mismatch]
+q-gcm.F:2208:5:
+
+   240 format(i6,1p,5d18.10)
+     1
+Warning: Label 240 at (1) defined but not used [-Wunused-label]
+q-gcm.F:2042:9:
+
+       USE intrfac, ONLY : sst, ast, hmixa
+         1
+Warning: Unused module variable 'ast' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2039:9:
+
+       USE occonst, ONLY : ddynoc
+         1
+Warning: Unused module variable 'ddynoc' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'et2mat' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'et2moc' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2042:9:
+
+       USE intrfac, ONLY : sst, ast, hmixa
+         1
+Warning: Unused module variable 'hmixa' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'kealat' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'kealoc' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'occirc' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'osfmax' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2044:9:
+
+       USE monitor, ONLY : pavgoc, qavgoc, kealoc, et2moc, osfmin,
+         1
+Warning: Unused module variable 'osfmin' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:2040:9:
+
+       USE ocstate, ONLY : po, qo, wekpo
+         1
+Warning: Unused module variable 'wekpo' which has been explicitly imported at (1) [-Wunused-variable]
+q-gcm.F:1839:33:
+
+       double precision plfac(nla),play
+                                 1
+Warning: Unused variable 'plfac' declared at (1) [-Wunused-variable]
+q-gcm.F:106:22:
+
+       integer i,j,k,i1,iorest,nsko,nska,nt,lenod,lename,oceanonly,
+                      1
+Warning: Unused variable 'i1' declared at (1) [-Wunused-variable]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c fftsubs.f
+fftpack/newbihar/drffti.f:9:80:
+
+       call drfti1 (n,wsave(n+1),wsave(2*n+1))
+                                                                                1
+Warning: Type mismatch in argument 'ifac' at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+fftpack/newbihar/drfftf.f:9:80:
+
+       call drftf1 (n,r,wsave,wsave(n+1),wsave(2*n+1))
+                                                                                1
+Warning: Type mismatch in argument 'ifac' at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+fftpack/newbihar/drfftb.f:9:80:
+
+       call drftb1 (n,r,wsave,wsave(n+1),wsave(2*n+1))
+                                                                                1
+Warning: Type mismatch in argument 'ifac' at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -c -o lasubs.o lasubs.f
+lapack/dlange.f:74:0:
+
+       DOUBLE PRECISION   SCALE, SUM, VALUE
+ 
+Warning: 'value' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlarf.f:104:0:
+
+          DO WHILE( LASTV.GT.0 .AND. V( I ).EQ.ZERO )
+ 
+Warning: 'ni' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dorm2r.f:99:0:
+
+       INTEGER            I, I1, I2, I3, IC, JC, MI, NI, NQ
+ 
+note: 'ni' was declared here
+lapack/dlarf.f:104:0:
+
+          DO WHILE( LASTV.GT.0 .AND. V( I ).EQ.ZERO )
+ 
+Warning: 'mi' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dorm2r.f:99:0:
+
+       INTEGER            I, I1, I2, I3, IC, JC, MI, NI, NQ
+ 
+note: 'mi' was declared here
+lapack/iparmq.f:241:0:
+
+          IF( NS.GE.KACMIN )
+ 
+Warning: 'ns' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/iparmq.f:225:0:
+
+          IF( NH.LE.KNWSWP ) THEN
+ 
+Warning: 'nh' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlamch.f:844:0:
+
+          Y = DLAMC3( Y*BETA, ZERO )
+ 
+Warning: 'y' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlamch.f:54:0:
+
+       DOUBLE PRECISION   BASE, EMAX, EMIN, EPS, PREC, RMACH, RMAX, RMIN,
+ 
+Warning: 'rmach' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlahqr.f:491:0:
+
+             IF( I2.GT.I )
+ 
+Warning: 'i2' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlahr2.f:225:0:
+
+       A( K+NB, NB ) = EI
+ 
+Warning: 'ei' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dgehrd.f:222:0:
+
+          DO 40 I = ILO, IHI - 1 - NX, NB
+ 
+Warning: 'nx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlahrd.f:202:0:
+
+       A( K+NB, NB ) = EI
+ 
+Warning: 'ei' may be used uninitialized in this function [-Wmaybe-uninitialized]
+lapack/dlanhs.f:71:0:
+
+       DOUBLE PRECISION   SCALE, SUM, VALUE
+ 
+Warning: 'value' may be used uninitialized in this function [-Wmaybe-uninitialized]
+mpif90 -ffixed-line-length-80 -fimplicit-none -std=legacy -O3 -mtune=native -Wunused -Wuninitialized -Waliasing -Wsurprising -ffpe-trap=invalid,zero,overflow -fbacktrace -g -fopenmp -o q-gcm parameters_data.o q-gcm.o atconst_data.o occonst_data.o athomog_data.o ochomog_data.o atstate_data.o ocstate_data.o intrfac_data.o radiate_data.o timinfo_data.o monitor_data.o nc_subs.o areasubs_diag.o covaria_diag.o monitor_diag.o qocdiag.o timavge.o conhoms.o vorsubs.o xfosubs.o valsubs.o radsubs.o intsubs.o fftsubs.o omlsubs.o qgosubs.o ocisubs.o topsubs.o amlsubs.o qgasubs.o atisubs.o eigmode.o luparam_data.o ludyn_subs.o atluvar.o ocluvar.o atedvl.o ocedvl.o lasubs.o  -L/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/lib -L/srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/hdf5-1.10.7-6wclfm4i64jkuc7uwdfqio2c7xufkdoy/lib -lnetcdff -lnetcdf -lhdf5_hl -lhdf5 -lz -lm  -lm
+/usr/bin/ld: warning: libnetcdf.so.18, needed by /srv/soft/spack/opt/spack/linux-debian10-x86_64/gcc-8.3.0/netcdf-fortran-4.5.3-kcighyw4a7jd5wberlf3ic3znjoko3my/lib/libnetcdff.so, may conflict with libnetcdf.so.13
