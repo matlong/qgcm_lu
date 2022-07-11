@@ -4,10 +4,10 @@ set -x
 ulimit -s hard
 export OMP_NUM_THREADS=4
 
-rcopt=1 # option for recompilation
+recompile=1 # option for recompilation
 
 mkdir -p outdata
-if [[ "$rcopt" == "1" ]]; then
+if [[ "$recompile" == "1" ]]; then
   echo "Compiling q-gcm"
   rm q-gcm
   cd ./src
